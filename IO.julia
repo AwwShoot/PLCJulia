@@ -1,0 +1,21 @@
+using Printf
+coords1 = readline()
+coords2 = readline()
+coords3 = readline()
+coords4 = readline()
+for line in eachline(stdin) 
+	# do equation stuff here
+	g = -952
+	h = 401000000
+	j = -22900000
+	m = 25500000000000000000
+	o = 446000000000000000000000000000000
+	@printf "g= %9.2e, h= %9.2e, j= %9.2e, m= %9.2e, o= %9.2e \n" g h j m o
+	@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" pos_objectX pos_objectY pos_objectZ pos_distance
+	@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" neg_objectX neg_objectY neg_objectZ neg_distance
+end
+print("next")
+print(coords1)
+print(coords2)
+print(coords3)
+print(coords4)
