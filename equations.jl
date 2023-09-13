@@ -10,10 +10,10 @@ function sgn(N)
 	end
 end
 
-satt_i = readline()
-satt_j = readline()
-satt_k = readline()
-satt_l = readline()
+satt_i = readlines()
+satt_j = readlines()
+satt_k = readlines()
+satt_l = readlines()
 
 # we need to split the coordinates from the readlines
 # so we can get each individual x, y, z value
@@ -175,18 +175,18 @@ for line in eachline(stdin)
 	print(Q)
 	
 	# Finally, The coordinates.
-	z_pos = (2 * O) / Q_pos - 2
-	z_neg = (2 * O) / Q_neg - 2
-	x_pos = G * z_pos + H
-	x_neg = G * z_neg + H
-	x_pos = I * z_pos + J
-	x_neg = I * z_neg + J
+	#z_pos = (2 * O) / Q_pos - 2
+	#z_neg = (2 * O) / Q_neg - 2
+	#x_pos = G * z_pos + H
+	#x_neg = G * z_neg + H
+	#x_pos = I * z_pos + J
+	#x_neg = I * z_neg + J
 	
 	# and the distances from the origin for some reason?
-	pos_distance = (x_pos ^ 2 + y_pos ^ 2 + z_pos ^ 2) ^ 0.5
-	neg_distance = (x_neg ^ 2 + y_neg ^ 2 + z_neg ^ 2) ^ 0.5
+	#pos_distance = (x_pos ^ 2 + y_pos ^ 2 + z_pos ^ 2) ^ 0.5
+	#neg_distance = (x_neg ^ 2 + y_neg ^ 2 + z_neg ^ 2) ^ 0.5
 	
-	@printf "g= %9.2e, h= %9.2e, j= %9.2e, m= %9.2e, o= %9.2e \n" G H J M O
-	@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" x_pos y_pos z_pos pos_distance
-	@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" x_neg y_neg z_neg neg_distance
+	#@printf "g= %9.2e, h= %9.2e, j= %9.2e, m= %9.2e, o= %9.2e \n" G H J M O
+	#@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" x_pos y_pos z_pos pos_distance
+	#@printf "+) x= %10i, y= %10i, z= %10i; I= %10i%n" x_neg y_neg z_neg neg_distance
 end
