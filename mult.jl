@@ -32,7 +32,7 @@ k_coords = Float64[]
 l_coords = Float64[]
 
 for i in range(1,3)
-	println(i)
+
 	curr_coord = parse(Float64, satt_i[i])
 	push!(i_coords, curr_coord)
 
@@ -46,10 +46,7 @@ for i in range(1,3)
 	push!(l_coords, curr_coord)
 end
 
-println(i_coords)
-println(j_coords)
-println(k_coords)
-println(l_coords)
+
 
 #x four distances
 x_ji = j_coords[1] - i_coords[1]
@@ -135,15 +132,11 @@ for lines in range(5, length(input))
 	G = (D - B) / (A - C)
 	H = (F - E) / (A - C)
 
-    println(G)
-	println(H)
+
 	# I and J I guess
 	I = (A * G) + B
 	J = (A * H) + E
 	
-	
-	println(I)
-	println(J)
 
     # Once more I am truly unsure of what is and isn't a variabel. Why are these only using ki?
 	K = R_ik2 + (2 * x_ki * H) + (2 * y_ki * J)
@@ -160,8 +153,7 @@ for lines in range(5, length(input))
 	N = ((8 * (R_ik^2)) * (G * (i_coords[1] - H) + (I * (i_coords[2] - J)) + i_coords[3])) + (2 * L * K)
 	O = (R2_ik4 *(((i_coords[1] - H)^2) + ((i_coords[2] - J)^2) + (i_coords[3]^2))) - (K^2)
 	
-	println(M)
-	println(O)
+
 	
 	
 	# Finally, a formula I recognize
@@ -182,7 +174,7 @@ for lines in range(5, length(input))
 	neg_distance = (x_neg ^ 2 + y_neg ^ 2 + z_neg ^ 2) ^ 0.5
 	
 	@printf "g= %9.2e, h= %9.2e, j= %9.2e, m= %9.2e, o= %9.2e \n" G H J M O
-	@printf "+) x= %10.2e, y= %10.2e, z= %10.2e; I= %10.2e\n" x_pos y_pos z_pos pos_distance
-	@printf "+) x= %10.2e, y= %10.2e, z= %10.2e; I= %10.2e\n" x_neg y_neg z_neg neg_distance
+	@printf "+) x= %10e, y= %10e, z= %10e; I= %10e\n" x_pos y_pos z_pos pos_distance
+	@printf "+) x= %10e, y= %10e, z= %10e; I= %10e\n" x_neg y_neg z_neg neg_distance
     
 end
