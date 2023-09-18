@@ -174,7 +174,7 @@ for lines in range(5, length(input))
 	neg_distance = (x_neg ^ 2 + y_neg ^ 2 + z_neg ^ 2) ^ 0.5
 	
 	@printf "g= %9.2e, h= %9.2e, j= %9.2e, m= %9.2e, o= %9.2e \n" G H J M O
-	@printf "+) x= %10e, y= %10e, z= %10e; I= %10e\n" x_pos y_pos z_pos pos_distance
-	@printf "+) x= %10e, y= %10e, z= %10e; I= %10e\n" x_neg y_neg z_neg neg_distance
+	@printf "+) x= %10i, y= %10i, z= %10i; I= %10i\n" x_pos y_pos z_pos pos_distance
+	@printf "-) x= %10i, y= %10i, z= %10i; I= %10i\n" x_neg y_neg z_neg neg_distance
     
 end
